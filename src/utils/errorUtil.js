@@ -1,5 +1,5 @@
-var dateTimeUtil = require('../utils/dateTime');
-var mysql = require('../utils/dbUtil');
+var dateTimeUtil = require('./dateTime');
+var mysql = require('./dbUtil');
 
 function errorReporting(req, errorType, errorMessage, errorData) {
     errorType ? errorType : 'WARNING';

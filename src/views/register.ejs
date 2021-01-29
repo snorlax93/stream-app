@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title><%= title %></title> 
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <p><%= message %></p>
+    <p><%- message %></p>
+    <% if(locals.regForm) { %>
+      <form action="/users/register" method="post">
+        @handle: <input type="text" name="athandle" /><br><br>
+        userName: <input type="text" name="userName" /><br><br>
+        emailAddress: <input type="text" name="emailAddress" /><br><br>
+        <input type="submit" value="Submit"/><br><br><hr>
+      </form>
+    <% } %>
   </body>
 </html>
